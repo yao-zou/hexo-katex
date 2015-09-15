@@ -1,7 +1,7 @@
 {
   "name": "hexo-katex",
   "version": "0.0.1",
-  "description": "Use KaTeX to display math in hexo sites.",
+  "description": "Use KaTeX to display math in Hexo sites.",
   "main": "index",
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
     "url": "https://raw.github.com/thcode/hexo-katex/master/LICENSE"
   },
   "dependencies": {
-    "katex": "*"
+    "cheerio": "^0.19.0",
+    "katex": "^0.5.1"
   }
 }

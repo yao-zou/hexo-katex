@@ -1,6 +1,6 @@
 # hexo-katex
 
-Use KaTeX to display math in hexo sites.
+Use KaTeX to display math in Hexo sites.
 
 ## Install 
 

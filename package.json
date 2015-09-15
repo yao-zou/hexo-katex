@@ -1,0 +1,26 @@
+{
+  "name": "hexo-katex",
+  "version": "0.0.1",
+  "description": "Use KaTeX to display math in hexo sites.",
+  "main": "index",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thcode/hexo-katex.git"
+  },
+  "bugs": {
+    "url": "https://github.com/thcode/hexo-katex/issues"
+  },
+  "keywords": [
+    "hexo",
+    "katex",
+    "filter"
+  ],
+  "author": "Shuyu Liang <thinkingene@gmail.com> (http://thcode.com)",
+  "license": {
+    "type": "MIT",
+    "url": "https://raw.github.com/thcode/hexo-katex/master/LICENSE"
+  },
+  "dependencies": {
+    "katex": "*"
+  }
+}

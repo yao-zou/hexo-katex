@@ -17,11 +17,13 @@ Then install hexo-katex.
 npm install hexo-katex --save
 ```
 
+Make sure to include CSS and font files on the page. Refer to [KaTeX Docs](https://github.com/Khan/KaTeX#usage)
+
 ## Writing
 
-Inline math `$E=m*c^2$`
+Inline math `$E = m * c^2$`
 
-Display math  
+Display math
 
 ```
 $$

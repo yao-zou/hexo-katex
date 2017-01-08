@@ -5,12 +5,15 @@ var util = require('hexo-util');
 var cheerio;
 
 hexo.extend.filter.register('after_post_render', function(data){
+  var hexo = this,
+      options = hexo.config.katex;
+
   var content = data.content;
   var linkTag = '';
 
   if (!cheerio) cheerio = require('cheerio');
 
-  var $ = cheerio.load(data.content, {decodeEntities: false});
+  var $ = cheerio.load(data.content, {decodeEntities: true});
 
   if ($('.math').length > 0){
     linkTag = util.htmlTag('link', {
@@ -29,5 +32,10 @@ hexo.extend.filter.register('after_post_render', function(data){
     $(this).replaceWith(html)
   });
 
-  data.content = linkTag + $.html();
+  if (options.css === false) {
+    data.content = $.html();
+  } else {
+    data.content = linkTag + $.html();
+  }
 });
+

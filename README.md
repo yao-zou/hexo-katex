@@ -4,7 +4,7 @@ Use KaTeX to display math in Hexo sites.
 
 ## Install 
 
-Install `hexo-render-pandoc` and modify /node_modules/hexo-render-pandoc/index.js:
+Install `hexo-renderer-pandoc` and modify /node_modules/hexo-renderer-pandoc/index.js:
 
 ```
 //var args = [ '-f', 'markdown', '-t', 'html', '--mathjax', '--smart'];
@@ -17,7 +17,13 @@ Then install hexo-katex.
 npm install hexo-katex --save
 ```
 
-Make sure to include CSS and font files on the page. Refer to [KaTeX Docs](https://github.com/Khan/KaTeX#usage)
+KaTeX css link will be automatically injected into post, if you want to add it manually, modify `_config.yml`
+
+```
+katex:
+  css: false
+```
+
 
 ## Writing
 

@@ -32,10 +32,9 @@ hexo.extend.filter.register('after_post_render', function(data){
     $(this).replaceWith(html)
   });
 
-  if (options.css === false) {
+  if (options && options.css === false) {
     data.content = $.html();
   } else {
     data.content = linkTag + $.html();
   }
 });
-

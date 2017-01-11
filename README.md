@@ -4,11 +4,11 @@ Use KaTeX to display math in Hexo sites.
 
 ## Install 
 
-Install `hexo-renderer-pandoc` and modify /node_modules/hexo-renderer-pandoc/index.js:
+Install [hexo-renderer-pandoc](https://github.com/wzpan/hexo-renderer-pandoc) and config math engine.
 
 ```
-//var args = [ '-f', 'markdown', '-t', 'html', '--mathjax', '--smart'];
-var args = [ '-f', 'markdown', '-t', 'html', '--katex', '--smart'];
+pandoc:
+  mathEngine: katex
 ```
 
 Then install hexo-katex.
@@ -17,7 +17,7 @@ Then install hexo-katex.
 npm install hexo-katex --save
 ```
 
-KaTeX css link will be automatically injected into post, if you want to add it manually, modify `_config.yml`
+KaTeX css link will be automatically injected into post, if you want to add it manually, modify `_config.yml`.
 
 ```
 katex:

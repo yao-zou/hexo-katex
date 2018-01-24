@@ -37,4 +37,4 @@ hexo.extend.filter.register('after_post_render', function(data){
   } else {
     data.content = linkTag + $.html();
   }
-});
+}, 8);

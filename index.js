@@ -23,12 +23,16 @@ hexo.extend.filter.register('after_post_render', function(data){
   }
 
   $('.math.inline').each(function(){
-    var html = katex.renderToString($(this).text());
+    var text = $(this).text();
+    text = text.substring(2, text.length - 2);
+    var html = katex.renderToString(text);
     $(this).replaceWith(html)
   });
 
   $('.math.display').each(function(){
-    var html = katex.renderToString($(this).text(), { displayMode: true });
+    var text = $(this).text();
+    text = text.substring(2, text.length - 2);
+    var html = katex.renderToString(text, { displayMode: true });
     $(this).replaceWith(html)
   });
 
